@@ -1,42 +1,52 @@
 let input = document.querySelector("#txt-input");
 let btnTranslate = document.querySelector("#btn-translate");
 let output = document.querySelector("#txt-output");
+let clipboardBtn = document.querySelector('.icon-clipboard');
 
 function constructUrl(text) {
-    return  'https://api.funtranslations.com/translate/morse.json' + "?" + "text=" + text
-  }
+    return 'https://api.funtranslations.com/translate/morse.json' + "?" + "text=" + text
+}
 
-  function resultText(text){
+function resultText(text) {
     output.innerHTML = "";
-    btnTranslate.innerHTML="translating...";
-    let index=0;
+    btnTranslate.innerHTML = "translating...";
+    let index = 0;
     let intr = setInterval(myfun, 2000)
-    function myfun(){
-        randomJump = Math.floor((Math.random() * (text.length/2)) + 1);
-        if(index+randomJump>=text.length){
-            randomJump=text.length - index
+
+    function myfun() {
+        randomJump = Math.floor((Math.random() * (text.length / 2)) + 1);
+        if (index + randomJump >= text.length) {
+            randomJump = text.length - index
         }
-        output.innerHTML+= text.slice(index, index+randomJump);
-        index+=randomJump
-        if(index == text.length){
-            btnTranslate.innerHTML="translate";
+        output.innerHTML += text.slice(index, index + randomJump);
+        index += randomJump
+        if (index == text.length) {
+            btnTranslate.innerHTML = "translate";
             clearInterval(intr);
         }
     }
 
-  }
+}
 
-  function callBackErrorHandler() {
+function callBackErrorHandler() {
     console.log("Something went wrong with the api call")
-    output.innerHTML="... --- -- . - .... .. -. --.     .-- . -. -     .-- .-. --- -. --.         - .-. -.--     .- --. .- .. -.     .- ..-. - . .-.     ... --- -- .     - .. -- . .-.-.-"
- }
+    output.innerHTML = "... --- -- . - .... .. -. --.     .-- . -. -     .-- .-. --- -. --.         - .-. -.--     .- --. .- .. -.     .- ..-. - . .-.     ... --- -- .     - .. -- . .-.-.-"
+}
 
- btnTranslate.addEventListener("click", () => {
-    let inputText = input.value; 
+btnTranslate.addEventListener("click", () => {
+    let inputText = input.value;
     console.log("Input text is " + inputText)
     fetch(constructUrl(inputText))
-    .then(response => response.json())
-    .then(json => resultText(json.contents.translated))
-    .catch(callBackErrorHandler)
-    
- })
+        .then(response => response.json())
+        .then(json => resultText(json.contents.translated))
+        .catch(callBackErrorHandler)
+
+});
+
+clipboardBtn.addEventListener("click", () => {
+    let copyText = output;
+    copyText.select();
+    copyText.setSelectionRange(0, 99999)
+    document.execCommand("copy");
+
+});

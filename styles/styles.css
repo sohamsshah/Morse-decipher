@@ -2,6 +2,7 @@
 
 :root{
     --primary-color: #94fc13; 
+    --dark-neon-green: #80dd0f;
     --dark-gray: #212121;
     --dark-black: black;
 }
@@ -96,7 +97,7 @@ body {
     color: black;
     background-color: var(--primary-color);
     border-color: black;
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Share Tech Mono', monospace;
     
     
 }
@@ -107,7 +108,7 @@ body {
 }
 
 #btn-translate:hover{
-    background-color: ;
+    background-color: var(--dark-neon-green);
 }
 
 /* Footer Section */
@@ -116,7 +117,7 @@ body {
     padding-top: 2rem;
 }
 .footer{
-    background-color: var(--bright-yellow);
+    background-color: var(--dark-gray);
     padding: 1rem 1rem;
     text-align: center;
     color: var(--primary-color);
