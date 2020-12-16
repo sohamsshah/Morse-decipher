@@ -72,22 +72,22 @@ body {
     font-family: 'Share Tech Mono', monospace;
 }
 
-.icon-clipboard{
+.icons{
     width: 50%;
     text-align: right;
-    margin-left:2rem;
+    margin-left:1.8rem;
     position: relative;
 }
 
-.icon-clipboard .fas{
+.icons .fas{
     position: relative;
-    margin-bottom: 45px;
+    margin-bottom: 25px;
     font-size: 1.2rem;
     color: var(--dark-gray);
 }
 
 .tweet{
-    margin-top: -40px;
+    margin-top: -90px;
 }
 
 /* Button Section */
