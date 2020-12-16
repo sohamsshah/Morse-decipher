@@ -11,7 +11,7 @@ function constructUrl(text, usage="api") {
     } 
     else if(usage=="twitter"){
         text = text +  "Translated with ❤ created by @sohamsshah";
-        let url_param = "www.morsedecipher.netlify.app";
+        let url_param = "https://morsedecipher.netlify.app/";
         return `https://twitter.com/intent/tweet?text=${text}&url=${url_param}&hashtags=programming,python`;
     }  
 }
