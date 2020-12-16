@@ -8,5 +8,6 @@ Live website: [Morse Decipher](https://morsedecipher.netlify.app/)
 * CSS3
 * JS ES6
 * API from [funtranslations.com](https://funtranslations.com/api/morse)
+* CI/CD and Hosting by NETLIFY⚡
 
 Made with ♥ by @sohamsshah
