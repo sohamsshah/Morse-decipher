@@ -38,6 +38,8 @@ body {
 .nav-brand{
     padding: 0.5rem 1rem;
     font-size: 1.8rem;
+    font-weight:900;
+    
 }
 
 .navigation .nav-pills {
@@ -47,6 +49,10 @@ body {
 .navigation a{
     color: var(--off-white);
     text-decoration: none;  
+}
+
+.link-active{
+    font-weight: bold;
 }
 
 /* Input and Output Section */
@@ -60,6 +66,7 @@ body {
     margin-top: -4.1rem;
     z-index:-1;
 }
+
 
 
 #txt-input, #txt-output{
@@ -82,7 +89,7 @@ body {
 
 .icons .fas{
     position: relative;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     font-size: 1.2rem;
     color: var(--dark-gray);
 }
@@ -149,6 +156,32 @@ body {
     padding-right: 0.5rem;
 
 }
+
+/* Tooltip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+  
 
 
 
