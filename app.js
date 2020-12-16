@@ -8,6 +8,7 @@ function constructUrl(text) {
 
   function resultText(text){
     output.innerHTML = "";
+    btnTranslate.innerHTML="translating...";
     let index=0;
     let intr = setInterval(myfun, 2000)
     function myfun(){
@@ -27,12 +28,11 @@ function constructUrl(text) {
 
   function callBackErrorHandler() {
     console.log("Something went wrong with the api call")
-    alert("Sorry, something went wrong with the api call")
+    output.innerHTML="... --- -- . - .... .. -. --.     .-- . -. -     .-- .-. --- -. --.         - .-. -.--     .- --. .- .. -.     .- ..-. - . .-.     ... --- -- .     - .. -- . .-.-.-"
  }
 
  btnTranslate.addEventListener("click", () => {
-    let inputText = input.value;
-    btnTranslate.innerHTML="translating..."; 
+    let inputText = input.value; 
     console.log("Input text is " + inputText)
     fetch(constructUrl(inputText))
     .then(response => response.json())
