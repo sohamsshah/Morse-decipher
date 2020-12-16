@@ -11,7 +11,12 @@ function constructUrl(text) {
     let index=0;
     let intr = setInterval(myfun, 2000)
     function myfun(){
-        output.innerHTML+= text[index++];
+        randomJump = Math.floor((Math.random() * (text.length/2)) + 1);
+        if(index+randomJump>=text.length){
+            randomJump=text.length - index
+        }
+        output.innerHTML+= text.slice(index, index+randomJump);
+        index+=randomJump
         if(index == text.length) clearInterval(intr);
     }
 
