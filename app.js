@@ -1,10 +1,19 @@
 let input = document.querySelector("#txt-input");
 let btnTranslate = document.querySelector("#btn-translate");
 let output = document.querySelector("#txt-output");
-let clipboardBtn = document.querySelector('.icon-clipboard');
+let clipboardBtn = document.querySelector('.fas');
+let twitterBtn = document.querySelector('.div-twitter');
 
-function constructUrl(text) {
-    return 'https://api.funtranslations.com/translate/morse.json' + "?" + "text=" + text
+
+function constructUrl(text, usage="api") {
+    if(usage==="api"){
+        return 'https://api.funtranslations.com/translate/morse.json' + "?" + "text=" + text;
+    } 
+    else if(usage=="twitter"){
+        text = text +  "Translated with ❤ created by @sohamsshah";
+        let url_param = "www.morsedecipher.netlify.app";
+        return `https://twitter.com/intent/tweet?text=${text}&url=${url_param}&hashtags=programming,python`;
+    }  
 }
 
 function resultText(text) {
@@ -49,4 +58,11 @@ clipboardBtn.addEventListener("click", () => {
     copyText.setSelectionRange(0, 99999)
     document.execCommand("copy");
 
+});
+
+
+twitterBtn.addEventListener("click", () => {
+    let text=output.innerHTML;
+    let url = constructUrl(text, "twitter");
+    window.open( url, "_blank"); 
 });
