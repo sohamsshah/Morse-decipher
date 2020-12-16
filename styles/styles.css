@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Special+Elite&display=swap');
 
 :root{
     --primary-color: #0A75BC; 
@@ -7,7 +7,7 @@
     --medium-brown: #A87A51;
 }
 body {
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Share Tech Mono', monospace;
     margin: 0px;
 }
 
@@ -37,7 +37,6 @@ body {
 .nav-brand{
     padding: 0.5rem 1rem;
     font-size: 1.8rem;
-    font-style: italic;
 }
 
 .navigation .nav-pills {

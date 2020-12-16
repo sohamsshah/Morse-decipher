@@ -6,7 +6,7 @@ function constructUrl(text) {
     return  'https://api.funtranslations.com/translate/morse.json' + "?" + "text=" + text
   }
 
-  function addText(text){
+  function resultText(text){
     output.innerHTML = "";
     let index=0;
     let intr = setInterval(myfun, 2000)
@@ -32,6 +32,6 @@ function constructUrl(text) {
     console.log("Input text is " + inputText)
     fetch(constructUrl(inputText))
     .then(response => response.json())
-    .then(json => addText(json.contents.translated))
+    .then(json => resultText(json.contents.translated))
     .catch(callBackErrorHandler)
  })
