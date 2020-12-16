@@ -69,12 +69,14 @@ body {
     padding: 1rem;
     border-color: var(--primary-color);
     background-color: #eee;
+    font-family: 'Share Tech Mono', monospace;
 }
 
 .icon-clipboard{
     width: 50%;
     text-align: right;
     margin-left:2rem;
+    position: relative;
 }
 
 .icon-clipboard .fas{
@@ -82,6 +84,10 @@ body {
     margin-bottom: 45px;
     font-size: 1.2rem;
     color: var(--dark-gray);
+}
+
+.tweet{
+    margin-top: -40px;
 }
 
 /* Button Section */
