@@ -9,4 +9,4 @@ Live website: [Morse Decipher](https://morsedecipher.netlify.app/)
 * JS ES6
 * API from [funtranslations.com](https://funtranslations.com/api/morse)
 
-Made with ♥ by sohamsshah
+Made with ♥ by @sohamsshah
