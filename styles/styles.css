@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Special+Elite&display=swap');
 
 :root{
-    --primary-color: #0A75BC; 
-    --off-white: #eee;
-    --bright-yellow: #FCE029;
-    --medium-brown: #A87A51;
+    --primary-color: #94fc13; 
+    --dark-gray: #212121;
+    --dark-black: black;
 }
 body {
     font-family: 'Share Tech Mono', monospace;
     margin: 0px;
+    background-color: var(--dark-black);
 }
 
 .container {
@@ -29,7 +29,7 @@ body {
 
 .navigation{
     background-color: var(--primary-color);
-    color: var(--bright-yellow);
+    color: var(--dark-gray);
     padding: 1rem;
     border-bottom-left-radius: 1rem;
 }
@@ -52,6 +52,7 @@ body {
 
 #section-input, #section-output{
     padding: 2rem;
+    color: var(--primary-color);
 }
 
 #txt-input, #txt-output{
@@ -76,7 +77,7 @@ body {
     padding: 1rem;
     border-radius: 7%;
     color: black;
-    background-color: var(--medium-brown);
+    background-color: var(--primary-color);
     border-color: black;
     font-family: 'Permanent Marker', cursive;
     
@@ -89,7 +90,7 @@ body {
 }
 
 #btn-translate:hover{
-    background-color: #815b3a;
+    background-color: ;
 }
 
 /* Footer Section */

@@ -17,7 +17,10 @@ function constructUrl(text) {
         }
         output.innerHTML+= text.slice(index, index+randomJump);
         index+=randomJump
-        if(index == text.length) clearInterval(intr);
+        if(index == text.length){
+            btnTranslate.innerHTML="translate";
+            clearInterval(intr);
+        }
     }
 
   }
@@ -28,10 +31,12 @@ function constructUrl(text) {
  }
 
  btnTranslate.addEventListener("click", () => {
-    let inputText = input.value; 
+    let inputText = input.value;
+    btnTranslate.innerHTML="translating..."; 
     console.log("Input text is " + inputText)
     fetch(constructUrl(inputText))
     .then(response => response.json())
     .then(json => resultText(json.contents.translated))
     .catch(callBackErrorHandler)
+    
  })
